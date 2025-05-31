@@ -22,24 +22,24 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" &&  computerChoice === "paper"){
-        return "You lose! " + computerChoice + " beats " + humanChoice;
+        return console.log("You lose! " + computerChoice + " beats " + humanChoice);
     } else if (humanChoice === "paper" && computerChoice === "scissors") {
-        return "You lose! " + computerChoice + " beats " + humanChoice;
+        return console.log("You lose! " + computerChoice + " beats " + humanChoice);
     } else if (humanChoice === "scissors" && computerChoice === "rock") {
-        return "You lose! " + computerChoice + " beats " + humanChoice;
+        return console.log("You lose! " + computerChoice + " beats " + humanChoice);
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
-        return "You win! " + computerChoice + " beats " + humanChoice;
+        return console.log("You win! " + computerChoice + " beats " + humanChoice);
     } else if (humanChoice === "paper" && computerChoice === "rock") {
-        return "You win! " + computerChoice + " beats " + humanChoice;
+        return console.log("You win! " + computerChoice + " beats " + humanChoice);
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
-        return "You win! " + computerChoice + " beats " + humanChoice;
+        return console.log("You win! " + computerChoice + " beats " + humanChoice);
     } else {
-        return "Tie! Both are the same.";
+        return console.log("Tie! Both are the same.");
     }
       
 }
 
-const computerSelection = getComputerChoice();
 const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 
 playRound(humanSelection, computerSelection);
