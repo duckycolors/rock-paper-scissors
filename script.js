@@ -1,14 +1,11 @@
 let humanScore = 0;
 let computerScore = 0;
 
-
-let randomChoice = Math.random();
-console.log(randomChoice);
-
 function getComputerChoice() {
-    if (randomChoice > 0.66) {
+    let computerChoice = Math.random();
+    if (computerChoice > 0.66) {
         return "Paper";
-    } else if (randomChoice < 0.66 && randomChoice > 0.33) {
+    } else if (computerChoice < 0.66 && computerChoice > 0.33) {
         return "Scissors";
     } else {
         return "Rock";
@@ -17,12 +14,13 @@ function getComputerChoice() {
 console.log(getComputerChoice());
 
 function getHumanChoice() {
-    humanChoice = prompt("Rock, Paper or Scissors?");
+    let humanChoice = prompt("Rock, Paper or Scissors?");
     console.log(humanChoice);
+    return humanChoice;
 }
 
 function playRound(humanChoice, computerChoice) {
-
+    
 }
 
 const computerSelection = getComputerChoice();
