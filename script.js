@@ -22,17 +22,33 @@ function getHumanChoice() {
     return humanChoice;
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
 
-    console.log(humanScore);
-    console.log(computerScore);
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    humanSelection = getHumanChoice();
+    computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection);
+
+    console.log("Final human score: "+ humanScore);
+    console.log("Final computer score: " + computerScore);
+
     function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" &&  computerChoice === "paper"){
         computerScore++;
@@ -55,7 +71,6 @@ function playGame() {
     } else {
         return console.log("Tie! Both are the same.");
     }
-    
 }
 }
 
