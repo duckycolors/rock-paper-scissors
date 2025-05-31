@@ -49,6 +49,14 @@ function playGame() {
     console.log("Final human score: "+ humanScore);
     console.log("Final computer score: " + computerScore);
 
+    if (humanScore > computerScore) {
+        console.log("You beat the computer!")
+    } else if (computerScore > humanScore){
+        console.log("You lost to the computer!");
+    } else {
+        console.log("You tied with the computer!");
+    }
+
     function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" &&  computerChoice === "paper"){
         computerScore++;
