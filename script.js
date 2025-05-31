@@ -1,6 +1,3 @@
-let humanScore = 0;
-let computerScore = 0;
-
 function getComputerChoice() {
     let computerChoice = Math.random();
     if (computerChoice > 0.66) {
@@ -25,7 +22,18 @@ function getHumanChoice() {
     return humanChoice;
 }
 
-function playRound(humanChoice, computerChoice) {
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+
+    playRound(humanSelection, computerSelection);
+
+    console.log(humanScore);
+    console.log(computerScore);
+    function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" &&  computerChoice === "paper"){
         computerScore++;
         return console.log("You lose! " + computerChoice + " beats " + humanChoice);
@@ -47,9 +55,8 @@ function playRound(humanChoice, computerChoice) {
     } else {
         return console.log("Tie! Both are the same.");
     }
+    
+}
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-playRound(humanSelection, computerSelection);
+playGame();
