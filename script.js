@@ -1,12 +1,15 @@
 humanChoice = 0;
 
+playertext1 = document.querySelector("#pScore");
+playertext2 = document.querySelector("#cScore");
+
+
 btnSelect = document.querySelectorAll("button");
 btnSelect.forEach(buttons => {
     buttons.addEventListener("click", () => {
         humanChoose = buttons.textContent;
         humanChoice = humanChoose.toLowerCase();
         console.log(humanChoice);
-        playGame();
     })
 });
 
@@ -29,13 +32,7 @@ function getComputerChoice() {
 }
 
 function playGame() {
-    let humanScore = 0;
-    let computerScore = 0;
-    let computerSelection = getComputerChoice();
     playRound(humanChoice, computerSelection);
-
-    console.log("Final human score: "+ humanScore);
-    console.log("Final computer score: " + computerScore);
 
     if (humanScore > computerScore) {
         console.log("You beat the computer!")
@@ -44,8 +41,9 @@ function playGame() {
     } else {
         console.log("You tied with the computer!");
     }
+}
 
-    function playRound(humanChoice, computerChoice) {
+function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" &&  computerChoice === "paper"){
         computerScore++;
         return console.log("You lose! " + computerChoice + " beats " + humanChoice);
@@ -67,6 +65,5 @@ function playGame() {
     } else {
         return console.log("Tie! Both are the same.");
     }
-}
-}
 
+}
