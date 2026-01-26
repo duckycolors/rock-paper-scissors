@@ -10,6 +10,8 @@ btnSelect.forEach(buttons => {
         humanChoose = buttons.textContent;
         humanChoice = humanChoose.toLowerCase();
         console.log(humanChoice);
+        getComputerChoice();
+        playRound();
     })
 });
 
@@ -33,7 +35,6 @@ function getComputerChoice() {
 
 function playGame() {
     playRound(humanChoice, computerSelection);
-
     if (humanScore > computerScore) {
         console.log("You beat the computer!")
     } else if (computerScore > humanScore){
@@ -42,6 +43,9 @@ function playGame() {
         console.log("You tied with the computer!");
     }
 }
+
+let humanScore;
+let computerScore;
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" &&  computerChoice === "paper"){
