@@ -1,8 +1,8 @@
 humanChoice = 0;
+computerChoice = 0;
 
 playertext1 = document.querySelector("#pScore");
 playertext2 = document.querySelector("#cScore");
-
 
 btnSelect = document.querySelectorAll("button");
 btnSelect.forEach(buttons => {
@@ -11,24 +11,22 @@ btnSelect.forEach(buttons => {
         humanChoice = humanChoose.toLowerCase();
         console.log(humanChoice);
         getComputerChoice();
-        playRound();
+        console.log(computerChoice);
+        playRound(humanChoice, computerChoice);
     })
 });
 
 
 function getComputerChoice() {
-    let computerChoice = Math.random();
+    computerChoice = Math.random();
     if (computerChoice > 0.66) {
         computerChoice = "paper";
-        console.log(computerChoice);
         return "paper";
     } else if (computerChoice < 0.66 && computerChoice > 0.33) {
         computerChoice = "scissors";
-        console.log(computerChoice);
         return "scissors";
     } else {
         computerChoice = "rock";
-        console.log(computerChoice);
         return "rock";
     }
 }
