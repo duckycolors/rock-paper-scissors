@@ -30,22 +30,6 @@ function playGame() {
     let computerSelection = getComputerChoice();
     playRound(humanSelection, computerSelection);
 
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-
-    humanSelection = getHumanChoice();
-    computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
-
     console.log("Final human score: "+ humanScore);
     console.log("Final computer score: " + computerScore);
 
