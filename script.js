@@ -1,3 +1,10 @@
+rockSelect = document.querySelector("rock");
+paperSelect = document.querySelector("paper");
+scissorsSelect = document.querySelector("scissors");
+rockSelect.addEventListener();
+
+
+
 function getComputerChoice() {
     let computerChoice = Math.random();
     if (computerChoice > 0.66) {
@@ -65,5 +72,7 @@ function playGame() {
     }
 }
 }
+
+
 
 playGame();
