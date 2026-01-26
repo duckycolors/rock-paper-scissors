@@ -1,7 +1,9 @@
-rockSelect = document.querySelector("rock");
-paperSelect = document.querySelector("paper");
-scissorsSelect = document.querySelector("scissors");
-rockSelect.addEventListener();
+rockSelect = document.querySelector("#Rock");
+paperSelect = document.querySelector("#Paper");
+scissorsSelect = document.querySelector("#Scissors");
+rockSelect.addEventListener("click", playGame);
+paperSelect.addEventListener("click", playGame);
+scissorsSelect.addEventListener("click", playGame);
 
 
 
@@ -73,6 +75,3 @@ function playGame() {
 }
 }
 
-
-
-playGame();
