@@ -6,5 +6,7 @@ div {
 }
 
 .box {
+    color: blue;
+    background-color: blue;
     border: 5px solid blue;
 }

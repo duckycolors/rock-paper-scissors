@@ -92,10 +92,13 @@ function playRound(humanChoice, computerChoice) {
     
     if (roundNum > 4 && humanScore > computerScore) {
         winnerText.textContent = `You Win!`;
+        winnerText.classList.add(".box");
     } else if(roundNum > 4 && computerScore > humanScore) {
         winnerText.textContent = `You Lose!`;
+        winnerText.classList.add(".box");
     } else if (roundNum > 4 && computerScore === humanScore) {
         winnerText.textContent = `Draw!`;
+        winnerText.classList.add(".box");
     } 
 
 }
