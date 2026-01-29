@@ -50,42 +50,42 @@ function playRound(humanChoice, computerChoice) {
         console.log(computerScore);
         playertext1.textContent = `Player Score: ${humanScore}`;
         playertext2.textContent = `Computer Score: ${computerScore}`;
-        statusText.textContent = ("You lose! " + computerChoice + " beats " + humanChoice);
+        statusText.textContent = ("Loss! " + computerChoice + " beats " + humanChoice);
     } else if (humanChoice === "paper" && computerChoice === "scissors") {
         computerScore++;
         console.log(humanScore);
         console.log(computerScore);
         playertext1.textContent = `Player Score: ${humanScore}`;
         playertext2.textContent = `Computer Score: ${computerScore}`;
-        statusText.textContent = ("You lose! " + computerChoice + " beats " + humanChoice);
+        statusText.textContent = ("Loss! " + computerChoice + " beats " + humanChoice);
     } else if (humanChoice === "scissors" && computerChoice === "rock") {
         computerScore++;
         console.log(humanScore);
         console.log(computerScore);
         playertext1.textContent = `Player Score: ${humanScore}`;
         playertext2.textContent = `Computer Score: ${computerScore}`;
-        statusText.textContent = ("You lose! " + computerChoice + " beats " + humanChoice);
+        statusText.textContent = ("Loss! " + computerChoice + " beats " + humanChoice);
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
         humanScore++;
         console.log(humanScore);
         console.log(computerScore);
         playertext1.textContent = `Player Score: ${humanScore}`;
         playertext2.textContent = `Computer Score: ${computerScore}`;
-        statusText.textContent = ("You win! " + humanChoice + " beats " + computerChoice);
+        statusText.textContent = ("Success! " + humanChoice + " beats " + computerChoice);
     } else if (humanChoice === "paper" && computerChoice === "rock") {
         humanScore++;
         console.log(humanScore);
         console.log(computerScore);
         playertext1.textContent = `Player Score: ${humanScore}`;
         playertext2.textContent = `Computer Score: ${computerScore}`;
-        statusText.textContent = ("You win! " + humanChoice + " beats " + computerChoice);
+        statusText.textContent = ("Success! " + humanChoice + " beats " + computerChoice);
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
         humanScore++;
         console.log(humanScore);
         console.log(computerScore);
         playertext1.textContent = `Player Score: ${humanScore}`;
         playertext2.textContent = `Computer Score: ${computerScore}`;
-        statusText.textContent = ("You win! " + humanChoice + " beats " + computerChoice);
+        statusText.textContent = ("Success! " + humanChoice + " beats " + computerChoice);
     } else {
         console.log(humanScore);
         console.log(computerScore);
@@ -95,14 +95,14 @@ function playRound(humanChoice, computerChoice) {
     if (roundNum > 4 && humanScore > computerScore) {
         winnerText.textContent = `You Win!`;
         playertext1.style.cssText = "color: darkseagreen";
-        winnerText.style.cssText = "color: red";
+        winnerText.style.cssText = "color: blue";
     } else if(roundNum > 4 && computerScore > humanScore) {
         winnerText.textContent = `You Lose!`;
         playertext2.style.cssText = "color: darkseagreen";
         winnerText.style.cssText = "color: red";
     } else if (roundNum > 4 && computerScore === humanScore) {
         winnerText.textContent = `Draw!`;
-        winnerText.style.cssText = "color: fuchsia";
+        winnerText.style.cssText = "color: orange";
     } 
 
 }
