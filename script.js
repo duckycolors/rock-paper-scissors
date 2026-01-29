@@ -5,6 +5,8 @@ let roundNum = 0;
 playertext1 = document.querySelector("#pScore");
 playertext2 = document.querySelector("#cScore");
 winnerText = document.querySelector("#winner");
+parentDiv = document.querySelector("#parent");
+statusText = document.querySelector("#status");
 
 btnSelect = document.querySelectorAll("button");
 btnSelect.forEach(buttons => {
@@ -48,57 +50,59 @@ function playRound(humanChoice, computerChoice) {
         console.log(computerScore);
         playertext1.textContent = `Player Score: ${humanScore}`;
         playertext2.textContent = `Computer Score: ${computerScore}`;
-        console.log("You lose! " + computerChoice + " beats " + humanChoice);
+        statusText.textContent = ("You lose! " + computerChoice + " beats " + humanChoice);
     } else if (humanChoice === "paper" && computerChoice === "scissors") {
         computerScore++;
         console.log(humanScore);
         console.log(computerScore);
         playertext1.textContent = `Player Score: ${humanScore}`;
         playertext2.textContent = `Computer Score: ${computerScore}`;
-        console.log("You lose! " + computerChoice + " beats " + humanChoice);
+        statusText.textContent = ("You lose! " + computerChoice + " beats " + humanChoice);
     } else if (humanChoice === "scissors" && computerChoice === "rock") {
         computerScore++;
         console.log(humanScore);
         console.log(computerScore);
         playertext1.textContent = `Player Score: ${humanScore}`;
         playertext2.textContent = `Computer Score: ${computerScore}`;
-        console.log("You lose! " + computerChoice + " beats " + humanChoice);
+        statusText.textContent = ("You lose! " + computerChoice + " beats " + humanChoice);
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
         humanScore++;
         console.log(humanScore);
         console.log(computerScore);
         playertext1.textContent = `Player Score: ${humanScore}`;
         playertext2.textContent = `Computer Score: ${computerScore}`;
-        console.log("You win! " + humanChoice + " beats " + computerChoice);
+        statusText.textContent = ("You win! " + humanChoice + " beats " + computerChoice);
     } else if (humanChoice === "paper" && computerChoice === "rock") {
         humanScore++;
         console.log(humanScore);
         console.log(computerScore);
         playertext1.textContent = `Player Score: ${humanScore}`;
         playertext2.textContent = `Computer Score: ${computerScore}`;
-        console.log("You win! " + humanChoice + " beats " + computerChoice);
+        statusText.textContent = ("You win! " + humanChoice + " beats " + computerChoice);
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
         humanScore++;
         console.log(humanScore);
         console.log(computerScore);
         playertext1.textContent = `Player Score: ${humanScore}`;
         playertext2.textContent = `Computer Score: ${computerScore}`;
-        console.log("You win! " + humanChoice + " beats " + computerChoice);
+        statusText.textContent = ("You win! " + humanChoice + " beats " + computerChoice);
     } else {
         console.log(humanScore);
         console.log(computerScore);
-        console.log("Tie! Both are the same.");
+        statusText.textContent = ("Tie! Both are the same.");
     }
     
     if (roundNum > 4 && humanScore > computerScore) {
         winnerText.textContent = `You Win!`;
-        winnerText.classList.add(".box");
+        playertext1.style.cssText = "color: darkseagreen";
+        winnerText.style.cssText = "color: red";
     } else if(roundNum > 4 && computerScore > humanScore) {
         winnerText.textContent = `You Lose!`;
-        winnerText.classList.add(".box");
+        playertext2.style.cssText = "color: darkseagreen";
+        winnerText.style.cssText = "color: red";
     } else if (roundNum > 4 && computerScore === humanScore) {
         winnerText.textContent = `Draw!`;
-        winnerText.classList.add(".box");
+        winnerText.style.cssText = "color: fuchsia";
     } 
 
 }
